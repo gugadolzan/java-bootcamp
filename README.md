@@ -1,4 +1,2 @@
-# Java Bootcamp
-
-## Wave 7
+# Bootcamp Meli BR W7 Java
 
