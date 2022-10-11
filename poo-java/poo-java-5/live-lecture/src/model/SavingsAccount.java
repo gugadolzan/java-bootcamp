@@ -3,7 +3,7 @@ package model;
 import exception.InvalidNumberException;
 
 public class SavingsAccount extends Account {
-    private static double fee;
+    private static double fee = 0.1;
 
     public SavingsAccount(int number, Client client) {
         super(number, client);

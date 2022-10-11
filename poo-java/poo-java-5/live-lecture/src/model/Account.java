@@ -2,7 +2,7 @@ package model;
 
 import exception.InvalidNumberException;
 
-public abstract class Account {
+public abstract class Account implements Comparable<Account> {
     private final int number;
     private double balance;
     private final Client client;
@@ -18,6 +18,10 @@ public abstract class Account {
 
     public double getBalance() {
         return balance;
+    }
+
+    public String getClientCpf() {
+        return client.getCpf();
     }
 
     public void deposit(double value) throws InvalidNumberException {
@@ -40,5 +44,15 @@ public abstract class Account {
         return "number=" + number +
                 ", balance=" + balance +
                 ", client=" + client;
+    }
+
+    @Override
+    public int compareTo(Account account) {
+        if (this.balance > account.getBalance()) {
+            return 1;
+        } else if (this.balance < account.getBalance()) {
+            return -1;
+        }
+        return 0;
     }
 }
