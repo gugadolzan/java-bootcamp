@@ -5,6 +5,7 @@ import exercise01.classes.Collector;
 import exercise01.classes.Executive;
 
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("=== Executive ===");
         Executive executive = new Executive();
@@ -33,4 +34,5 @@ public class Main {
         collector.getBalance();
         collector.failedTransaction("Get Balance");
     }
+
 }

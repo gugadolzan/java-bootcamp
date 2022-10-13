@@ -1,4 +1,5 @@
 public class Registration {
+
     private Category category;
     private Marathonist marathonist;
     private Double registrationFee;
@@ -62,4 +63,5 @@ public class Registration {
                 ", registrationFee=" + registrationFee +
                 '}';
     }
+
 }

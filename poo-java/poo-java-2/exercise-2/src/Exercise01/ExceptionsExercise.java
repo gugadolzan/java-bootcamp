@@ -1,6 +1,7 @@
 package Exercise01;
 
 public class ExceptionsExercise {
+
     public static void main(String[] args) {
         int a = 0;
         int b = 300;
@@ -30,4 +31,5 @@ public class ExceptionsExercise {
             System.out.println("Program finished");
         }
     }
+
 }

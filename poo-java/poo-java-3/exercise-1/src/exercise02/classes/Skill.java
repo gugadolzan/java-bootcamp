@@ -1,6 +1,7 @@
 package exercise02.classes;
 
 public class Skill {
+
     private String description;
 
     public Skill(String description) {
@@ -13,4 +14,5 @@ public class Skill {
                 "description='" + description + '\'' +
                 '}';
     }
+
 }

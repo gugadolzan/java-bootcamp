@@ -3,6 +3,7 @@ package model;
 import exception.InvalidNumberException;
 
 public class CurrentAccount extends Account {
+
     public CurrentAccount(int number, Client client) {
         super(number, client);
     }
@@ -23,4 +24,5 @@ public class CurrentAccount extends Account {
     public String toString() {
         return "Current Account: " + super.toString();
     }
+
 }

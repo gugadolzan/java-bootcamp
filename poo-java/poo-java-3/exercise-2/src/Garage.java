@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Garage {
+
     private int id;
     private ArrayList<Vehicle> vehicles;
 
@@ -61,4 +62,5 @@ public class Garage {
                 ", vehicles=" + vehicles +
                 '}';
     }
+
 }

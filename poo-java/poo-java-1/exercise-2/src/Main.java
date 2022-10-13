@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Main {
+
     public static void main(String[] args) {
         // Create marathonists
         Marathonist m1 = new Marathonist("123456789", "Eddie", "Munson", 20, "123456789", "987654321", "A+");
@@ -85,4 +86,5 @@ public class Main {
         JungleMarathon jungleMarathon = new JungleMarathon(circuits);
         System.out.println(jungleMarathon);
     }
+
 }

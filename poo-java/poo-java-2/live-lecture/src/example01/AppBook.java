@@ -1,6 +1,7 @@
 package example01;
 
 public class AppBook {
+
     public static void main(String[] args) {
         Book myBbook = new Book();
 
@@ -9,4 +10,5 @@ public class AppBook {
 
         System.out.println("Title: " + myBbook.title);
     }
+
 }

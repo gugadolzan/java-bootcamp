@@ -8,6 +8,7 @@ import repository.ItemRepository;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         BillRepository billRepository = new BillRepository();
         CustomerRepository customerRepository = new CustomerRepository();
@@ -55,4 +56,5 @@ public class Main {
         System.out.println("Bill:");
         System.out.println(bill);
     }
+
 }

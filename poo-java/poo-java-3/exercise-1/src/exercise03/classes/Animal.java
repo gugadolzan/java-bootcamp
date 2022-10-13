@@ -1,6 +1,7 @@
 package exercise03.classes;
 
 public abstract class Animal {
+
     private String name;
     private String race;
 
@@ -34,4 +35,5 @@ public abstract class Animal {
     }
 
     public abstract void makeSound();
+
 }

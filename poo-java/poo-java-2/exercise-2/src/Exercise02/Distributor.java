@@ -1,6 +1,7 @@
 package Exercise02;
 
 public class Distributor {
+
     public static void main(String[] args) {
         Product[] products = new Product[4];
 
@@ -17,4 +18,5 @@ public class Distributor {
 
         System.out.println("Total = " + total);
     }
+
 }

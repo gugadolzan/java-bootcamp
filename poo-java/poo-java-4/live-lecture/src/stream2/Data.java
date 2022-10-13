@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Data {
+
     static List<Person> people = new ArrayList<>() {
         {
             add(new Person("Bree Mayer", "Peru", 25, 14.68));
@@ -112,4 +113,5 @@ public class Data {
     public static List<Person> getPeople() {
         return people;
     }
+
 }

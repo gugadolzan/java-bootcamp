@@ -3,6 +3,7 @@ package model;
 import java.util.List;
 
 public class Bill {
+
     private Long code;
     private Customer customer;
     private List<Item> items;
@@ -53,4 +54,5 @@ public class Bill {
                 ", total=" + getTotal() +
                 '}';
     }
+
 }

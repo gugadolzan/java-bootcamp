@@ -1,6 +1,7 @@
 package example05;
 
 public class Example05 {
+
     public static void main(String[] args) {
         int[][] matrix = new int[5][5];
 
@@ -17,4 +18,5 @@ public class Example05 {
             System.out.println();
         }
     }
+
 }

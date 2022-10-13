@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class CustomerRepository implements Repository<Customer> {
+
     private final List<Customer> customers;
 
     public CustomerRepository() {
@@ -20,12 +21,15 @@ public class CustomerRepository implements Repository<Customer> {
 
     @Override
     public void showAll() {
-        for (Customer customer : customers) System.out.println(customer);
+        for (Customer customer : customers)
+            System.out.println(customer);
     }
 
     @Override
     public Optional<Customer> getById(Long id) {
-        for (Customer customer : customers) if (customer.getId().equals(id)) return Optional.of(customer);
+        for (Customer customer : customers)
+            if (customer.getId().equals(id))
+                return Optional.of(customer);
         return Optional.empty();
     }
 
@@ -43,4 +47,5 @@ public class CustomerRepository implements Repository<Customer> {
     public List<Customer> getAll() {
         return customers;
     }
+
 }

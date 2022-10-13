@@ -1,6 +1,7 @@
 package generics;
 
-public class MyClass <T> {
+public class MyClass<T> {
+
     private T obj;
 
     public MyClass(T obj) {
@@ -10,4 +11,5 @@ public class MyClass <T> {
     public T getObj() {
         return obj;
     }
+
 }

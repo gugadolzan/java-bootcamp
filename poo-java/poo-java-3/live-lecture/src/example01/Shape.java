@@ -1,6 +1,7 @@
 package example01;
 
 public abstract class Shape {
+
     private int x, y;
 
     public Shape(int x, int y) {
@@ -17,6 +18,9 @@ public abstract class Shape {
     }
 
     public abstract void print();
+
     public abstract String getName();
+
     public abstract void show(Print print);
+
 }

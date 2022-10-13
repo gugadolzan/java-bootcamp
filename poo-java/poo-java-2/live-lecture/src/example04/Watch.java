@@ -1,6 +1,7 @@
 package example04;
 
 public class Watch {
+
     private final int DEFAULT_HOUR = 12;
     private int hour, minute, second;
     private static String brand;
@@ -46,4 +47,5 @@ public class Watch {
     public static void setBrand(String brand) {
         Watch.brand = brand;
     }
+
 }

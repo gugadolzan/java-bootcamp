@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ManageAccounts {
+
     private final Map<Integer, Account> accounts;
     private final NumberGenerator numberGenerator;
 
@@ -85,7 +86,7 @@ public class ManageAccounts {
     public List<String> getCurrentAccountsSortedByNumber() {
         return accounts.values().stream()
                 .filter(account -> account instanceof CurrentAccount)
-//                .sorted((c1, c2) -> c1.getNumber() - c2.getNumber())
+                // .sorted((c1, c2) -> c1.getNumber() - c2.getNumber())
                 .sorted(Comparator.comparingInt(Account::getNumber))
                 .map(Account::toString)
                 .collect(Collectors.toList());
@@ -94,7 +95,7 @@ public class ManageAccounts {
     public List<String> getCurrentAccountsSortedByBalance() {
         return accounts.values().stream()
                 .filter(account -> account instanceof CurrentAccount)
-//                .sorted((c1, c2) -> c2.compareTo(c1))
+                // .sorted((c1, c2) -> c2.compareTo(c1))
                 .sorted(Comparator.reverseOrder())
                 .map(Account::toString)
                 .collect(Collectors.toList());
@@ -108,4 +109,5 @@ public class ManageAccounts {
                 .map(Account::toString)
                 .collect(Collectors.toList());
     }
+
 }

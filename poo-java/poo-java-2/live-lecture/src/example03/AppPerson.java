@@ -1,6 +1,7 @@
 package example03;
 
 public class AppPerson {
+
     public static void main(String[] args) {
         Student student = new Student("John");
 
@@ -8,4 +9,5 @@ public class AppPerson {
 
         System.out.println(student);
     }
+
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 public class ProductDTO {
+
     private String name;
     private double value;
 
@@ -12,4 +13,5 @@ public class ProductDTO {
         this.name = product.getName();
         this.value = product.getValue();
     }
+
 }

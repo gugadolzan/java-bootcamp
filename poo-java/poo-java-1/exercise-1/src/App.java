@@ -1,4 +1,5 @@
 public class App {
+
     public static void main(String[] args) {
         String[] cities = { "London", "Madrid", "New York", "Buenos Aires", "Asunción", "São Paulo", "Lima",
                 "Santiago de Chile", "Lisbon", "Tokio" };
@@ -24,4 +25,5 @@ public class App {
         System.out.println("Coldest city: " + coldestCity + " - " + minTemp + "°C");
         System.out.println("Hottest city: " + hottestCity + " - " + maxTemp + "°C");
     }
+
 }

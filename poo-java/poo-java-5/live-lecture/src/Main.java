@@ -12,6 +12,7 @@ import util.PrintOnScreen;
 import java.util.Scanner;
 
 public class Main {
+
     private static final Scanner scanner = new Scanner(System.in);
     private static ManageAccounts accounts = new ManageAccounts();
     private static ManageClients clients = new ManageClients();
@@ -204,8 +205,10 @@ public class Main {
                 String input = scanner.nextLine();
                 Print print;
 
-                if (input.equalsIgnoreCase("S")) print = new PrintOnScreen();
-                else if (input.equalsIgnoreCase("P")) print = new PrintOnPrinter();
+                if (input.equalsIgnoreCase("S"))
+                    print = new PrintOnScreen();
+                else if (input.equalsIgnoreCase("P"))
+                    print = new PrintOnPrinter();
                 else {
                     System.out.println("Invalid option");
                     break;
@@ -297,4 +300,5 @@ public class Main {
 
         scanner.close();
     }
+
 }

@@ -3,6 +3,7 @@ package exercise03.classes;
 import exercise03.interfaces.Carnivore;
 
 public class Dog extends Animal implements Carnivore {
+
     public Dog(String name, String race) {
         super(name, race);
     }
@@ -16,4 +17,5 @@ public class Dog extends Animal implements Carnivore {
     public void eatMeat() {
         System.out.println("Dog eats meat");
     }
+
 }

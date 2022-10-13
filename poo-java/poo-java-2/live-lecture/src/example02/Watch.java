@@ -1,6 +1,7 @@
 package example02;
 
 public class Watch {
+
     private int hour, minute, second;
 
     public Watch() {
@@ -31,4 +32,5 @@ public class Watch {
     public void showTime() {
         System.out.println("Current time: " + hour + ":" + minute + ":" + second);
     }
+
 }

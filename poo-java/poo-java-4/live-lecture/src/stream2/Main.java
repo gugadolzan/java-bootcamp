@@ -3,6 +3,7 @@ package stream2;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
         List<Person> people = Data.getPeople();
 
@@ -31,4 +32,5 @@ public class Main {
 
         System.out.println("Average age: " + averageAge);
     }
+
 }

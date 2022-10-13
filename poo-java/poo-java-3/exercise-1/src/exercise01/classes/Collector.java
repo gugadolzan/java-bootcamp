@@ -4,6 +4,7 @@ import exercise01.interfaces.BalanceInquiry;
 import exercise01.interfaces.CashWithdrawal;
 
 public class Collector implements CashWithdrawal, BalanceInquiry {
+
     @Override
     public void getBalance() {
         System.out.println("Balance: 0");
@@ -23,4 +24,5 @@ public class Collector implements CashWithdrawal, BalanceInquiry {
     public void failedTransaction(String transactionType) {
         System.out.println("Failed " + transactionType);
     }
+
 }

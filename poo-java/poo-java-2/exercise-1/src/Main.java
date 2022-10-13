@@ -1,9 +1,11 @@
 public class Main {
+
     public static void main(String[] args) {
         Person person1 = new Person();
         Person person2 = new Person("John", 25, "123456789");
         Person person3 = new Person("John", 25, "123456789", 80, 1.8);
-        // Person person4 = new Person("John", 25); Cannot resolve constructor 'Person(String, int)'
+        // Person person4 = new Person("John", 25); Cannot resolve constructor
+        // 'Person(String, int)'
 
         System.out.println(person3);
 
@@ -25,4 +27,5 @@ public class Main {
             System.out.println(person3.getName() + " is not an adult");
         }
     }
+
 }

@@ -5,6 +5,7 @@ import exercise01.interfaces.CashWithdrawal;
 import exercise01.interfaces.ServicePayment;
 
 public class Basic implements BalanceInquiry, ServicePayment, CashWithdrawal {
+
     @Override
     public void getBalance() {
         System.out.println("Balance: 0");
@@ -29,4 +30,5 @@ public class Basic implements BalanceInquiry, ServicePayment, CashWithdrawal {
     public void failedTransaction(String transactionType) {
         System.out.println("Failed " + transactionType);
     }
+
 }

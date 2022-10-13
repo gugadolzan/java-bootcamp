@@ -3,6 +3,7 @@ package model;
 import exception.InvalidNumberException;
 
 public class SpecialAccount extends Account {
+
     private final double limit;
 
     public SpecialAccount(int number, Client client, double limit) {
@@ -26,4 +27,5 @@ public class SpecialAccount extends Account {
     public String toString() {
         return "Special Account: " + super.toString();
     }
+
 }

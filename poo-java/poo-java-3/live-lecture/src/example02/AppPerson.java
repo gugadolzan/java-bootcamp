@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppPerson {
+
     public static void main(String[] args) {
         List<Person> persons = new ArrayList<>();
 
@@ -15,4 +16,5 @@ public class AppPerson {
 
         System.out.println(persons.get(1));
     }
+
 }

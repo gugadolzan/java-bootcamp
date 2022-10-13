@@ -1,6 +1,7 @@
 package Exercise02;
 
 public class Perishable extends Product {
+
     private int daysToExpire;
 
     public Perishable(String name, double price, int daysToExpire) {
@@ -30,4 +31,5 @@ public class Perishable extends Product {
         }
         return super.calculateTotalPrice(quantity);
     }
+
 }

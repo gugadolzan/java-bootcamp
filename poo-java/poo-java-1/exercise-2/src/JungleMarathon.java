@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class JungleMarathon {
+
     final private ArrayList<Circuit> circuits;
     final private Double totalAmount;
     final private int totalRegistrations;
@@ -38,4 +39,5 @@ public class JungleMarathon {
                 ", totalRegistrations=" + totalRegistrations +
                 '}';
     }
+
 }

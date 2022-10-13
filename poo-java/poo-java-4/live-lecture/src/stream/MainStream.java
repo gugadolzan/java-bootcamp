@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MainStream {
+
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1, 22, 13, 4, 56, 36, 75, 58, 19, 10);
 
@@ -27,4 +28,5 @@ public class MainStream {
                 .sorted()
                 .forEach(System.out::println);
     }
+
 }

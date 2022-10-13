@@ -3,6 +3,7 @@ package model;
 import exception.InvalidNumberException;
 
 public class SavingsAccount extends Account {
+
     private static double fee = 0.1;
 
     public SavingsAccount(int number, Client client) {
@@ -33,4 +34,5 @@ public class SavingsAccount extends Account {
     public String toString() {
         return "Savings Account: " + super.toString();
     }
+
 }

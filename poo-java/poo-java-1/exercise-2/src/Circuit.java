@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Circuit {
+
     private Category category;
     private int distance;
     private ArrayList<Registration> registrations;
@@ -77,4 +78,5 @@ public class Circuit {
                 ", registrations=" + registrations +
                 '}';
     }
+
 }

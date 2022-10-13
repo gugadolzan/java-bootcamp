@@ -3,6 +3,7 @@ package model;
 import exception.InvalidNumberException;
 
 public abstract class Account implements Comparable<Account> {
+
     private final int number;
     private double balance;
     private final Client client;
@@ -55,4 +56,5 @@ public abstract class Account implements Comparable<Account> {
         }
         return 0;
     }
+
 }

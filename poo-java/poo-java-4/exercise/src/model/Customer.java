@@ -1,6 +1,7 @@
 package model;
 
 public class Customer {
+
     private Long id;
     private String name;
     private String surname;
@@ -43,4 +44,5 @@ public class Customer {
                 ", surname='" + surname + '\'' +
                 '}';
     }
+
 }

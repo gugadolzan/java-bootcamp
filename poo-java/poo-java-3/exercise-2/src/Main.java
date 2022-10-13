@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Main {
+
     public static void main(String[] args) {
         ArrayList<Vehicle> vehicles = new ArrayList<>();
 
@@ -24,4 +25,5 @@ public class Main {
         System.out.println("Vehicles with price over 1000: " + garage.priceOver1000());
         System.out.println("Average price: " + garage.averagePrice());
     }
+
 }

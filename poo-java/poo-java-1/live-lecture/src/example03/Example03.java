@@ -1,6 +1,7 @@
 package example03;
 
 public class Example03 {
+
     public static void main(String[] args) {
         int count = 1;
 
@@ -15,4 +16,5 @@ public class Example03 {
             System.out.print(count + " ");
         }
     }
+
 }

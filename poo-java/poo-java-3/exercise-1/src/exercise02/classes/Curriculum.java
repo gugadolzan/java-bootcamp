@@ -3,6 +3,7 @@ package exercise02.classes;
 import java.util.List;
 
 public class Curriculum extends Document {
+
     private Person person;
     private List<Skill> skills;
 
@@ -19,4 +20,5 @@ public class Curriculum extends Document {
                 ", skills=" + skills +
                 '}';
     }
+
 }

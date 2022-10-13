@@ -1,6 +1,7 @@
 package example01;
 
 public class Rectangle extends Shape {
+
     public Rectangle(int x, int y) {
         super(x, y);
     }
@@ -19,4 +20,5 @@ public class Rectangle extends Shape {
     public void show(Print print) {
         print.print(getName());
     }
+
 }

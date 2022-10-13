@@ -1,6 +1,7 @@
 package exercise02.classes;
 
 public abstract class Document {
+
     private String id;
 
     public Document(String id) {
@@ -13,4 +14,5 @@ public abstract class Document {
                 "id='" + id + '\'' +
                 '}';
     }
+
 }

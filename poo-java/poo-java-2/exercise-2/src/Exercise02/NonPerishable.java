@@ -1,6 +1,7 @@
 package Exercise02;
 
-public class NonPerishable extends Product{
+public class NonPerishable extends Product {
+
     private String type;
 
     public NonPerishable(String name, double price, String type) {
@@ -22,4 +23,5 @@ public class NonPerishable extends Product{
                 "type='" + type + '\'' +
                 '}';
     }
+
 }

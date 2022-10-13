@@ -3,6 +3,7 @@ package data;
 import exception.DuplicatedCpfException;
 
 public class DataTest {
+
     private static final ManageAccounts accounts = new ManageAccounts();
     private static final ManageClients clients = new ManageClients();
 
@@ -33,4 +34,5 @@ public class DataTest {
         accounts.addCurrentAccount(clients.getClient("12345678908"));
         return accounts;
     }
+
 }

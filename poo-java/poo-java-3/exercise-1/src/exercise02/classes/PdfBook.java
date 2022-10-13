@@ -1,6 +1,7 @@
 package exercise02.classes;
 
 public class PdfBook extends Document {
+
     private int numberOfPages;
     private String author;
     private String title;
@@ -23,4 +24,5 @@ public class PdfBook extends Document {
                 ", genre='" + genre + '\'' +
                 '}';
     }
+
 }

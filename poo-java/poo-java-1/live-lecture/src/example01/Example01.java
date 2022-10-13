@@ -1,6 +1,7 @@
 package example01;
 
 public class Example01 {
+
     public static void main(String[] args) {
         int intNumber;
         double doubleNumber;
@@ -23,4 +24,5 @@ public class Example01 {
 
         System.out.println("Total = " + sum);
     }
+
 }

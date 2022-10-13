@@ -1,6 +1,7 @@
 package exercise02.classes;
 
 public class Person {
+
     private String name;
 
     public Person(String name) {
@@ -21,4 +22,5 @@ public class Person {
                 "name='" + name + '\'' +
                 '}';
     }
+
 }

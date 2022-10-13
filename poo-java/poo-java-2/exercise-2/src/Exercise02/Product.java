@@ -1,6 +1,7 @@
 package Exercise02;
 
 public class Product {
+
     private String name;
     private double price;
 
@@ -36,4 +37,5 @@ public class Product {
     public double calculateTotalPrice(int quantity) {
         return price * quantity;
     }
+
 }

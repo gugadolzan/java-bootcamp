@@ -5,6 +5,7 @@ import exercise03.classes.Cow;
 import exercise03.classes.Dog;
 
 public class Main {
+
     public static void main(String[] args) {
         Dog dog = new Dog("Rayka", "Husky");
         Cat cat = new Cat("Maca", "Persian");
@@ -19,4 +20,5 @@ public class Main {
         cow.makeSound();
         cow.eatPlants();
     }
+
 }

@@ -1,6 +1,7 @@
 package example01;
 
 public class AppShape {
+
     public static void main(String[] args) {
         Square square = new Square(1, 2);
         Shape square2 = new Square(3, 4);
@@ -27,4 +28,5 @@ public class AppShape {
         shapes[0].show(screen);
         shapes[1].show(printer);
     }
+
 }

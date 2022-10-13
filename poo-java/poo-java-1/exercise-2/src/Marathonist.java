@@ -1,4 +1,5 @@
 public class Marathonist {
+
     private int code;
     private String id;
     private String name;
@@ -12,12 +13,12 @@ public class Marathonist {
     }
 
     public Marathonist(String id,
-                       String name,
-                       String surname,
-                       int age,
-                       String cell,
-                       String emergencyContact,
-                       String bloodType) {
+            String name,
+            String surname,
+            int age,
+            String cell,
+            String emergencyContact,
+            String bloodType) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -104,4 +105,5 @@ public class Marathonist {
                 ", bloodType='" + bloodType + '\'' +
                 '}';
     }
+
 }

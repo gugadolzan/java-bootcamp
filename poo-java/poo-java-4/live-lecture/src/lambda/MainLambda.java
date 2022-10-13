@@ -1,6 +1,7 @@
 package lambda;
 
 public class MainLambda {
+
     interface InterfaceString {
         String execute(String s);
     }
@@ -13,4 +14,5 @@ public class MainLambda {
     public static void print(String text, InterfaceString interfaceString) {
         System.out.println(interfaceString.execute(text));
     }
+
 }

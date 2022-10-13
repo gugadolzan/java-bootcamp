@@ -1,6 +1,7 @@
 package example02;
 
 public class Person {
+
     String name;
 
     public Person(String name) {
@@ -11,4 +12,5 @@ public class Person {
     public String toString() {
         return name;
     }
+
 }

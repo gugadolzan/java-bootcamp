@@ -1,6 +1,7 @@
 package example06;
 
 public class Example06 {
+
     public static void main(String[] args) {
         try {
             System.out.println("Answer: " + divide(11, 0));

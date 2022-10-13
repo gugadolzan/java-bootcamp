@@ -1,4 +1,5 @@
 public class Vehicle {
+
     private String model;
     private String brand;
     private int price;
@@ -41,4 +42,5 @@ public class Vehicle {
                 ", price=" + price +
                 '}';
     }
+
 }

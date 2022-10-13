@@ -1,6 +1,7 @@
 package model;
 
 public class Item {
+
     private Long code;
     private String name;
     private int quantity;
@@ -54,4 +55,5 @@ public class Item {
                 ", price=" + price +
                 '}';
     }
+
 }

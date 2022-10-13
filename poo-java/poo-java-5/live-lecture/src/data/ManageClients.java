@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ManageClients {
+
     private final Map<String, Client> clients;
 
     public ManageClients() {
@@ -38,4 +39,5 @@ public class ManageClients {
                 .map(Client::toString)
                 .collect(Collectors.toList());
     }
+
 }

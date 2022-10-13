@@ -1,6 +1,7 @@
 package exercise02.classes;
 
 public class Report extends Document {
+
     private String content;
     private int numberOfPages;
     private String author;
@@ -23,4 +24,5 @@ public class Report extends Document {
                 ", reviewer='" + reviewer + '\'' +
                 '}';
     }
+
 }

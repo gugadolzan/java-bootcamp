@@ -1,6 +1,7 @@
 package model;
 
 public class Client {
+
     private final String cpf;
     private final String name;
 
@@ -21,4 +22,5 @@ public class Client {
     public String toString() {
         return name + " (" + cpf + ")";
     }
+
 }

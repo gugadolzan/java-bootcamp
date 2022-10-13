@@ -1,6 +1,7 @@
 package stream2;
 
 public class Person implements Comparable<Person> {
+
     private String name, country;
     private int age;
     private double amountSpent;
@@ -51,10 +52,13 @@ public class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person otherPerson) {
-        if (this.age < otherPerson.getAge()) return -1;
+        if (this.age < otherPerson.getAge())
+            return -1;
 
-        if (this.age > otherPerson.getAge()) return 1;
+        if (this.age > otherPerson.getAge())
+            return 1;
 
         return 0;
     }
+
 }

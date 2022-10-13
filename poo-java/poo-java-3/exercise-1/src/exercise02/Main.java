@@ -6,6 +6,7 @@ import exercise02.interfaces.Printable;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
         Person person = new Person("John");
 
@@ -22,4 +23,5 @@ public class Main {
         Report report = new Report("REP1", "This is a report", 10, "John", "Jane");
         Printable.printDocument(report);
     }
+
 }

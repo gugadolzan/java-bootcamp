@@ -1,6 +1,7 @@
 package example03;
 
 public class Student extends Person {
+
     public Student(String name) {
         super(name);
     }
@@ -9,4 +10,5 @@ public class Student extends Person {
     public String toString() {
         return "Student: " + super.toString();
     }
+
 }

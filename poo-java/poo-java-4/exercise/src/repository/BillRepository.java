@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class BillRepository implements Repository<Bill> {
+
     private final List<Bill> bills;
 
     public BillRepository() {
@@ -20,12 +21,15 @@ public class BillRepository implements Repository<Bill> {
 
     @Override
     public void showAll() {
-        for (Bill bill : bills) System.out.println(bill);
+        for (Bill bill : bills)
+            System.out.println(bill);
     }
 
     @Override
     public Optional<Bill> getById(Long id) {
-        for (Bill bill : bills) if (bill.getCode().equals(id)) return Optional.of(bill);
+        for (Bill bill : bills)
+            if (bill.getCode().equals(id))
+                return Optional.of(bill);
         return Optional.empty();
     }
 
@@ -38,4 +42,5 @@ public class BillRepository implements Repository<Bill> {
     public List<Bill> getAll() {
         return bills;
     }
+
 }

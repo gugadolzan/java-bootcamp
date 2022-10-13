@@ -1,6 +1,7 @@
 package example05;
 
 public class Example05 {
+
     public static void main(String[] args) {
         int[] vector = new int[3];
 
@@ -26,4 +27,5 @@ public class Example05 {
 
         System.out.println("End");
     }
+
 }

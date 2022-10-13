@@ -1,6 +1,7 @@
 package example04;
 
 public class Example04 {
+
     public static void main(String[] args) {
         int[] vector = new int[10];
 
@@ -14,4 +15,5 @@ public class Example04 {
             System.out.print(vector[i] + " ");
         }
     }
+
 }

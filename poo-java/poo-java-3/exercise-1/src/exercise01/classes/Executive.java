@@ -4,6 +4,7 @@ import exercise01.interfaces.Deposit;
 import exercise01.interfaces.Transfer;
 
 public class Executive implements Deposit, Transfer {
+
     @Override
     public void deposit(double amount) {
         System.out.println("Deposit: " + amount);
@@ -23,4 +24,5 @@ public class Executive implements Deposit, Transfer {
     public void transfer(double amount) {
         System.out.println("Transfer: " + amount);
     }
+
 }

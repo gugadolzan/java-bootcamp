@@ -55,7 +55,8 @@ public class ProductController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Product>> getAll() {
-//        return new ResponseEntity<>(products, HttpStatus.OK);
+        // return new ResponseEntity<>(products, HttpStatus.OK);
         return ResponseEntity.ok(products);
     }
+
 }

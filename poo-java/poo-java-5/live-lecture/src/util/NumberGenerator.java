@@ -2,6 +2,7 @@ package util;
 
 // Singleton
 public class NumberGenerator {
+
     private int nextNumber;
     private static final NumberGenerator instance = new NumberGenerator();
 
