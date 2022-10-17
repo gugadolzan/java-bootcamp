@@ -15,4 +15,6 @@ public interface IVehicle {
 
     void saveVehicle(Vehicle vehicle);
 
+    List<Vehicle> getByModel(String model);
+
 }

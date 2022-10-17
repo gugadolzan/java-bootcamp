@@ -38,4 +38,9 @@ public class VehicleController {
         service.saveVehicle(vehicle);
     }
 
+    @GetMapping("/model/{model}")
+    public ResponseEntity<List<Vehicle>> getByModel(@PathVariable String model) {
+        return new ResponseEntity<>(service.getByModel(model), HttpStatus.OK);
+    }
+
 }
