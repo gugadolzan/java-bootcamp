@@ -1,5 +1,6 @@
 package br.com.dh.spring03.controller;
 
+import br.com.dh.spring03.dto.VehicleDTO;
 import br.com.dh.spring03.model.Vehicle;
 import br.com.dh.spring03.service.IVehicle;
 import java.util.List;
@@ -16,7 +17,7 @@ public class VehicleController {
     private IVehicle service;
 
     @GetMapping
-    public ResponseEntity<List<Vehicle>> getAllVehicles() {
+    public ResponseEntity<List<VehicleDTO>> getAllVehicles() {
         return new ResponseEntity<>(service.getAllVehicles(), HttpStatus.OK);
     }
 

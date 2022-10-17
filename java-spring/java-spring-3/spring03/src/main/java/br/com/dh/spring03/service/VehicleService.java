@@ -1,5 +1,6 @@
 package br.com.dh.spring03.service;
 
+import br.com.dh.spring03.dto.VehicleDTO;
 import br.com.dh.spring03.exception.NotFoundException;
 import br.com.dh.spring03.model.Vehicle;
 import br.com.dh.spring03.repository.VehicleRepo;
@@ -16,8 +17,12 @@ public class VehicleService implements IVehicle {
     private VehicleRepo repo;
 
     @Override
-    public List<Vehicle> getAllVehicles() {
-        return repo.getAll();
+    public List<VehicleDTO> getAllVehicles() {
+        return repo
+            .getAll()
+            .stream()
+            .map(VehicleDTO::new)
+            .collect(Collectors.toList());
     }
 
     @Override
@@ -45,7 +50,7 @@ public class VehicleService implements IVehicle {
 
     @Override
     public List<Vehicle> getByModel(String model) {
-        return getAllVehicles()
+        return getAllOrderedByValue()
             .stream()
             .filter(v -> v.getModel().equalsIgnoreCase(model))
             .collect(Collectors.toList());
