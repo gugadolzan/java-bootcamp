@@ -1,5 +1,5 @@
 public enum Category {
-
-    BEGINNER, INTERMEDIATE, ADVANCED
-
+    BEGINNER,
+    INTERMEDIATE,
+    ADVANCED,
 }

@@ -16,5 +16,4 @@ public class AppPerson {
 
         System.out.println(persons.get(1));
     }
-
 }

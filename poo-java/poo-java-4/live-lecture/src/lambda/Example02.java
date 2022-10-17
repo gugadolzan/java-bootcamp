@@ -11,13 +11,12 @@ public class Example02 {
         numbers.forEach(n -> System.out.print(n + " - "));
         System.out.println();
 
-        for (int i = 0; i < numbers.size(); i++)
-            System.out.print(numbers.get(i) + " - ");
+        for (int i = 0; i < numbers.size(); i++) System.out.print(
+            numbers.get(i) + " - "
+        );
         System.out.println();
 
-        for (Integer n : numbers)
-            System.out.print(n + " - ");
+        for (Integer n : numbers) System.out.print(n + " - ");
         System.out.println();
     }
-
 }

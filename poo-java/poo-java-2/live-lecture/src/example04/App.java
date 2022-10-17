@@ -11,5 +11,4 @@ public class App {
         System.out.println(watch1.showInfo());
         System.out.println(watch2.showInfo());
     }
-
 }

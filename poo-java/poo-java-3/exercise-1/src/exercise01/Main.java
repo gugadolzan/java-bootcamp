@@ -34,5 +34,4 @@ public class Main {
         collector.getBalance();
         collector.failedTransaction("Get Balance");
     }
-
 }

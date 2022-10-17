@@ -11,5 +11,4 @@ public class MyClass<T> {
     public T getObj() {
         return obj;
     }
-
 }

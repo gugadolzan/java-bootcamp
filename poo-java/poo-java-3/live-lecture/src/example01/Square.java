@@ -20,5 +20,4 @@ public class Square extends Shape {
     public void show(Print print) {
         print.print(getName());
     }
-
 }

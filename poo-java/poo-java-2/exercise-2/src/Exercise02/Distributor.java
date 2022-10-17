@@ -18,5 +18,4 @@ public class Distributor {
 
         System.out.println("Total = " + total);
     }
-
 }

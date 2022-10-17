@@ -18,20 +18,35 @@ public class Circuit {
 
     public void addRegistration(Registration registration) {
         if (registration.getCategory().equals(this.category)) {
-            if (!(registration.getMarathonist().getAge() < 18 &&
-                    registration.getCategory().equals(Category.ADVANCED))) {
+            if (
+                !(
+                    registration.getMarathonist().getAge() < 18 &&
+                    registration.getCategory().equals(Category.ADVANCED)
+                )
+            ) {
                 if (!registrations.contains(registration)) {
-                    registration.getMarathonist().setCode(registrations.size() + 1);
+                    registration
+                        .getMarathonist()
+                        .setCode(registrations.size() + 1);
                     this.registrations.add(registration);
-                    System.out.println("Registration for " + this.marathonistName(registration.getMarathonist()) +
-                            " in " + this.category + " category was successful.");
+                    System.out.println(
+                        "Registration for " +
+                        this.marathonistName(registration.getMarathonist()) +
+                        " in " +
+                        this.category +
+                        " category was successful."
+                    );
                 } else {
-                    System.out.println(this.marathonistName(registration.getMarathonist()) +
-                            " is already registered.");
+                    System.out.println(
+                        this.marathonistName(registration.getMarathonist()) +
+                        " is already registered."
+                    );
                 }
             } else {
-                System.out.println(this.marathonistName(registration.getMarathonist()) +
-                        " is too young to register for the advanced category.");
+                System.out.println(
+                    this.marathonistName(registration.getMarathonist()) +
+                    " is too young to register for the advanced category."
+                );
             }
         } else {
             System.out.println("The registration is not for this category");
@@ -39,7 +54,11 @@ public class Circuit {
     }
 
     public void removeRegistration(int code) {
-        if (registrations.removeIf(registration -> registration.getMarathonist().getCode() == code)) {
+        if (
+            registrations.removeIf(registration ->
+                registration.getMarathonist().getCode() == code
+            )
+        ) {
             System.out.println("Registration removed successfully");
         } else {
             System.out.println("Registration not found");
@@ -78,5 +97,4 @@ public class Circuit {
                 ", registrations=" + registrations +
                 '}';
     }
-
 }

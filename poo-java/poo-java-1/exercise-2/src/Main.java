@@ -4,14 +4,49 @@ public class Main {
 
     public static void main(String[] args) {
         // Create marathonists
-        Marathonist m1 = new Marathonist("123456789", "Eddie", "Munson", 20, "123456789", "987654321", "A+");
-        Marathonist m2 = new Marathonist("987654321", "Max", "Mayfield", 15, "987654321", "123456789", "B+");
-        Marathonist m3 = new Marathonist("135792468", "Billy", "Hargrove", 18, "135792468", "246813579", "AB+");
-        Marathonist m4 = new Marathonist("246813579", "Dustin", "Henderson", 14, "246813579", "135792468", "O+");
+        Marathonist m1 = new Marathonist(
+            "123456789",
+            "Eddie",
+            "Munson",
+            20,
+            "123456789",
+            "987654321",
+            "A+"
+        );
+        Marathonist m2 = new Marathonist(
+            "987654321",
+            "Max",
+            "Mayfield",
+            15,
+            "987654321",
+            "123456789",
+            "B+"
+        );
+        Marathonist m3 = new Marathonist(
+            "135792468",
+            "Billy",
+            "Hargrove",
+            18,
+            "135792468",
+            "246813579",
+            "AB+"
+        );
+        Marathonist m4 = new Marathonist(
+            "246813579",
+            "Dustin",
+            "Henderson",
+            14,
+            "246813579",
+            "135792468",
+            "O+"
+        );
 
         // Create circuits
         final Circuit beginnerCircuit = new Circuit(Category.BEGINNER, 10);
-        final Circuit intermediateCircuit = new Circuit(Category.INTERMEDIATE, 20);
+        final Circuit intermediateCircuit = new Circuit(
+            Category.INTERMEDIATE,
+            20
+        );
         final Circuit advancedCircuit = new Circuit(Category.ADVANCED, 30);
 
         // Create registrations for beginner circuit
@@ -33,7 +68,9 @@ public class Main {
         Registration r12 = new Registration(Category.ADVANCED, m4);
 
         // Add registrations to beginner circuit
-        System.out.println("********    ADDING REGISTRATION TO BEGINNER CIRCUIT");
+        System.out.println(
+            "********    ADDING REGISTRATION TO BEGINNER CIRCUIT"
+        );
         beginnerCircuit.addRegistration(r1);
         beginnerCircuit.addRegistration(r2);
         beginnerCircuit.addRegistration(r3);
@@ -42,7 +79,9 @@ public class Main {
         System.out.println();
 
         // Add registrations to intermediate circuit
-        System.out.println("********    ADDING REGISTRATION TO INTERMEDIATE CIRCUIT");
+        System.out.println(
+            "********    ADDING REGISTRATION TO INTERMEDIATE CIRCUIT"
+        );
         intermediateCircuit.addRegistration(r5);
         intermediateCircuit.addRegistration(r6);
         intermediateCircuit.addRegistration(r7);
@@ -51,7 +90,9 @@ public class Main {
         System.out.println();
 
         // Add registrations to advanced circuit
-        System.out.println("********    ADDING REGISTRATION TO ADVANCED CIRCUIT");
+        System.out.println(
+            "********    ADDING REGISTRATION TO ADVANCED CIRCUIT"
+        );
         advancedCircuit.addRegistration(r9);
         advancedCircuit.addRegistration(r10);
         advancedCircuit.addRegistration(r11);
@@ -86,5 +127,4 @@ public class Main {
         JungleMarathon jungleMarathon = new JungleMarathon(circuits);
         System.out.println(jungleMarathon);
     }
-
 }

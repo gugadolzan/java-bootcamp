@@ -7,5 +7,4 @@ public class PrintOnPrinter implements Print {
         System.out.println("Printing to printer...");
         System.out.println(data);
     }
-
 }

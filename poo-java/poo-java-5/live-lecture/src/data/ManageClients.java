@@ -1,12 +1,11 @@
 package data;
 
 import exception.DuplicatedCpfException;
-import model.Client;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import model.Client;
 
 public class ManageClients {
 
@@ -16,7 +15,8 @@ public class ManageClients {
         clients = new HashMap<>();
     }
 
-    public Client addClient(String cpf, String name) throws DuplicatedCpfException {
+    public Client addClient(String cpf, String name)
+        throws DuplicatedCpfException {
         if (clients.get(cpf) != null) {
             throw new DuplicatedCpfException("CPF already exists");
         }
@@ -35,9 +35,10 @@ public class ManageClients {
     }
 
     public List<String> getAll() {
-        return clients.values().stream()
-                .map(Client::toString)
-                .collect(Collectors.toList());
+        return clients
+            .values()
+            .stream()
+            .map(Client::toString)
+            .collect(Collectors.toList());
     }
-
 }

@@ -20,5 +20,4 @@ public class Curriculum extends Document {
                 ", skills=" + skills +
                 '}';
     }
-
 }

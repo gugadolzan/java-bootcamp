@@ -1,10 +1,30 @@
 public class App {
 
     public static void main(String[] args) {
-        String[] cities = { "London", "Madrid", "New York", "Buenos Aires", "Asunción", "São Paulo", "Lima",
-                "Santiago de Chile", "Lisbon", "Tokio" };
-        int[][] temperatures = { { -2, 33 }, { -3, 32 }, { -8, 27 }, { 4, 37 }, { 6, 42 }, { 5, 43 }, { 0, 39 },
-                { -7, 26 }, { -1, 31 }, { -10, 35 } };
+        String[] cities = {
+            "London",
+            "Madrid",
+            "New York",
+            "Buenos Aires",
+            "Asunción",
+            "São Paulo",
+            "Lima",
+            "Santiago de Chile",
+            "Lisbon",
+            "Tokio",
+        };
+        int[][] temperatures = {
+            { -2, 33 },
+            { -3, 32 },
+            { -8, 27 },
+            { 4, 37 },
+            { 6, 42 },
+            { 5, 43 },
+            { 0, 39 },
+            { -7, 26 },
+            { -1, 31 },
+            { -10, 35 },
+        };
 
         String coldestCity = cities[0];
         String hottestCity = cities[0];
@@ -22,8 +42,11 @@ public class App {
             }
         }
 
-        System.out.println("Coldest city: " + coldestCity + " - " + minTemp + "°C");
-        System.out.println("Hottest city: " + hottestCity + " - " + maxTemp + "°C");
+        System.out.println(
+            "Coldest city: " + coldestCity + " - " + minTemp + "°C"
+        );
+        System.out.println(
+            "Hottest city: " + hottestCity + " - " + maxTemp + "°C"
+        );
     }
-
 }

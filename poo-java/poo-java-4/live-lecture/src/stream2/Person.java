@@ -52,13 +52,10 @@ public class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person otherPerson) {
-        if (this.age < otherPerson.getAge())
-            return -1;
+        if (this.age < otherPerson.getAge()) return -1;
 
-        if (this.age > otherPerson.getAge())
-            return 1;
+        if (this.age > otherPerson.getAge()) return 1;
 
         return 0;
     }
-
 }

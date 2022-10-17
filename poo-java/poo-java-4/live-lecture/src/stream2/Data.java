@@ -113,5 +113,4 @@ public class Data {
     public static List<Person> getPeople() {
         return people;
     }
-
 }

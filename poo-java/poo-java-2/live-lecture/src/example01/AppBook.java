@@ -3,12 +3,11 @@ package example01;
 public class AppBook {
 
     public static void main(String[] args) {
-        Book myBbook = new Book();
+        Book myBook = new Book();
 
-        myBbook.title = "The Lord of the Rings";
-        myBbook.author = "J.R.R. Tolkien";
+        myBook.title = "The Lord of the Rings";
+        myBook.author = "J.R.R. Tolkien";
 
-        System.out.println("Title: " + myBbook.title);
+        System.out.println("Title: " + myBook.title);
     }
-
 }

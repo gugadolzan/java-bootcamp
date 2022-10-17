@@ -6,8 +6,7 @@ public class NumberGenerator {
     private int nextNumber;
     private static final NumberGenerator instance = new NumberGenerator();
 
-    private NumberGenerator() {
-    }
+    private NumberGenerator() {}
 
     public static NumberGenerator getInstance() {
         return instance;
@@ -16,5 +15,4 @@ public class NumberGenerator {
     public int getNextNumber() {
         return ++nextNumber;
     }
-
 }

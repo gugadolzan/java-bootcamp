@@ -16,5 +16,4 @@ public class Example06 {
         }
         return a / b;
     }
-
 }

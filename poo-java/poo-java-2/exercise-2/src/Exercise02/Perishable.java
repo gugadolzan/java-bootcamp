@@ -31,5 +31,4 @@ public class Perishable extends Product {
         }
         return super.calculateTotalPrice(quantity);
     }
-
 }

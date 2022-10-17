@@ -17,5 +17,4 @@ public class Cow extends Animal implements Herbivore {
     public void eatPlants() {
         System.out.println("Cow eats plants");
     }
-
 }

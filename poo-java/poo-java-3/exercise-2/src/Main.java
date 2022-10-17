@@ -21,9 +21,12 @@ public class Main {
 
         System.out.println("Vehicles sorted by price: " + garage.sortByPrice());
         System.out.println("Vehicles sorted by brand: " + garage.sortByBrand());
-        System.out.println("Vehicles with price under 1000: " + garage.priceUnder1000());
-        System.out.println("Vehicles with price over 1000: " + garage.priceOver1000());
+        System.out.println(
+            "Vehicles with price under 1000: " + garage.priceUnder1000()
+        );
+        System.out.println(
+            "Vehicles with price over 1000: " + garage.priceOver1000()
+        );
         System.out.println("Average price: " + garage.averagePrice());
     }
-
 }

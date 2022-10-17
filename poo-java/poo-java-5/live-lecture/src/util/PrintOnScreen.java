@@ -7,5 +7,4 @@ public class PrintOnScreen implements Print {
         System.out.println("Printing to screen...");
         System.out.println(data);
     }
-
 }

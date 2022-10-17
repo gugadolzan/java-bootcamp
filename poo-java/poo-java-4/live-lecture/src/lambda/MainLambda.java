@@ -14,5 +14,4 @@ public class MainLambda {
     public static void print(String text, InterfaceString interfaceString) {
         System.out.println(interfaceString.execute(text));
     }
-
 }

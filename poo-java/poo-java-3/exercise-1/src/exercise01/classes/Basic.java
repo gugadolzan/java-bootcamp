@@ -30,5 +30,4 @@ public class Basic implements BalanceInquiry, ServicePayment, CashWithdrawal {
     public void failedTransaction(String transactionType) {
         System.out.println("Failed " + transactionType);
     }
-
 }

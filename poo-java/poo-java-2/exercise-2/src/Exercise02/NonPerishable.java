@@ -23,5 +23,4 @@ public class NonPerishable extends Product {
                 "type='" + type + '\'' +
                 '}';
     }
-
 }

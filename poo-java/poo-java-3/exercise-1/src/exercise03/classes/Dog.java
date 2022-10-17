@@ -17,5 +17,4 @@ public class Dog extends Animal implements Carnivore {
     public void eatMeat() {
         System.out.println("Dog eats meat");
     }
-
 }

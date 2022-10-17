@@ -27,5 +27,4 @@ public class Main {
             System.out.println(person3.getName() + " is not an adult");
         }
     }
-
 }

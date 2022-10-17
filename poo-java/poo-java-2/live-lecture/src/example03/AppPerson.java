@@ -9,5 +9,4 @@ public class AppPerson {
 
         System.out.println(student);
     }
-
 }

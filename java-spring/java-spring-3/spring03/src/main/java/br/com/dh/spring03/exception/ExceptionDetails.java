@@ -1,9 +1,8 @@
 package br.com.dh.spring03.exception;
 
+import java.time.LocalDateTime;
 import lombok.Builder;
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -13,5 +12,4 @@ public class ExceptionDetails {
     private int status;
     private String message;
     private LocalDateTime timestamp;
-
 }

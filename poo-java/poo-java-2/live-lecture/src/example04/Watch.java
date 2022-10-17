@@ -6,8 +6,7 @@ public class Watch {
     private int hour, minute, second;
     private static String brand;
 
-    public Watch() {
-    }
+    public Watch() {}
 
     public Watch(int hour, int minute, int second) {
         setHour(hour);
@@ -33,7 +32,9 @@ public class Watch {
     }
 
     public String showInfo() {
-        return "Brand: " + brand + ", Time: " + hour + ":" + minute + ":" + second;
+        return (
+            "Brand: " + brand + ", Time: " + hour + ":" + minute + ":" + second
+        );
     }
 
     public static String currentTime() {
@@ -47,5 +48,4 @@ public class Watch {
     public static void setBrand(String brand) {
         Watch.brand = brand;
     }
-
 }

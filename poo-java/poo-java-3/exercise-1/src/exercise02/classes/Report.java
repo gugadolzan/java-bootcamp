@@ -7,7 +7,13 @@ public class Report extends Document {
     private String author;
     private String reviewer;
 
-    public Report(String id, String content, int numberOfPages, String author, String reviewer) {
+    public Report(
+        String id,
+        String content,
+        int numberOfPages,
+        String author,
+        String reviewer
+    ) {
         super(id);
         this.content = content;
         this.numberOfPages = numberOfPages;
@@ -24,5 +30,4 @@ public class Report extends Document {
                 ", reviewer='" + reviewer + '\'' +
                 '}';
     }
-
 }

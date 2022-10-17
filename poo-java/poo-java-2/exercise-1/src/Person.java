@@ -6,8 +6,7 @@ public class Person {
     private double weight;
     private double height;
 
-    public Person() {
-    }
+    public Person() {}
 
     public Person(String name, int age, String id) {
         this.name = name;
@@ -15,7 +14,13 @@ public class Person {
         this.id = id;
     }
 
-    public Person(String name, int age, String id, double weight, double height) {
+    public Person(
+        String name,
+        int age,
+        String id,
+        double weight,
+        double height
+    ) {
         this.name = name;
         this.age = age;
         this.id = id;
@@ -88,5 +93,4 @@ public class Person {
                 ", height=" + height +
                 '}';
     }
-
 }

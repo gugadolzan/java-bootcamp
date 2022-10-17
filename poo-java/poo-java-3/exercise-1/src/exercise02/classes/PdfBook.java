@@ -7,7 +7,13 @@ public class PdfBook extends Document {
     private String title;
     private String genre;
 
-    public PdfBook(String id, int numberOfPages, String author, String title, String genre) {
+    public PdfBook(
+        String id,
+        int numberOfPages,
+        String author,
+        String title,
+        String genre
+    ) {
         super(id);
         this.numberOfPages = numberOfPages;
         this.author = author;
@@ -24,5 +30,4 @@ public class PdfBook extends Document {
                 ", genre='" + genre + '\'' +
                 '}';
     }
-
 }

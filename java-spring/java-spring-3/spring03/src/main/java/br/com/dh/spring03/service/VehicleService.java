@@ -3,12 +3,11 @@ package br.com.dh.spring03.service;
 import br.com.dh.spring03.exception.NotFoundException;
 import br.com.dh.spring03.model.Vehicle;
 import br.com.dh.spring03.repository.VehicleRepo;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class VehicleService implements IVehicle {
@@ -46,9 +45,9 @@ public class VehicleService implements IVehicle {
 
     @Override
     public List<Vehicle> getByModel(String model) {
-        return getAllVehicles().stream()
-                .filter(v -> v.getModel().equalsIgnoreCase(model))
-                .collect(Collectors.toList());
+        return getAllVehicles()
+            .stream()
+            .filter(v -> v.getModel().equalsIgnoreCase(model))
+            .collect(Collectors.toList());
     }
-
 }

@@ -4,12 +4,11 @@ import data.ManageClients;
 import exception.DuplicatedCpfException;
 import exception.InvalidNumberException;
 import exception.NonExistentAccountException;
+import java.util.Scanner;
 import model.Client;
 import util.Print;
 import util.PrintOnPrinter;
 import util.PrintOnScreen;
-
-import java.util.Scanner;
 
 public class Main {
 
@@ -34,7 +33,6 @@ public class Main {
                     System.out.println(e.getMessage());
                 }
                 break;
-
             case 2:
                 System.out.print("CPF: ");
                 cpf = scanner.nextLine();
@@ -47,14 +45,15 @@ public class Main {
                     System.out.println("Client not found");
                 }
                 break;
-
             case 3:
                 System.out.print("CPF: ");
                 cpf = scanner.nextLine();
 
                 if (accounts.hasAccount(cpf)) {
-                    System.out.println("It is necessary to delete the account of this client " +
-                            "before deleting the client");
+                    System.out.println(
+                        "It is necessary to delete the account of this client " +
+                        "before deleting the client"
+                    );
                     break;
                 }
 
@@ -65,14 +64,11 @@ public class Main {
                     System.out.println("Client not found");
                 }
                 break;
-
             case 4:
                 System.out.println(clients.getAll());
                 break;
-
             case 0:
                 break;
-
             default:
                 System.out.println("Invalid option");
                 break;
@@ -100,7 +96,6 @@ public class Main {
                     System.out.println("Client not found");
                 }
                 break;
-
             case 2:
                 System.out.print("CPF: ");
                 cpf = scanner.nextLine();
@@ -114,7 +109,6 @@ public class Main {
                     System.out.println("Client not found");
                 }
                 break;
-
             case 3:
                 System.out.print("CPF: ");
                 cpf = scanner.nextLine();
@@ -126,7 +120,6 @@ public class Main {
                     System.out.println("Client not found");
                 }
                 break;
-
             case 4:
                 System.out.print("Account number: ");
                 accountNumber = Integer.parseInt(scanner.nextLine());
@@ -137,11 +130,12 @@ public class Main {
                 try {
                     accounts.deposit(accountNumber, value);
                     System.out.println("Deposit successful");
-                } catch (InvalidNumberException | NonExistentAccountException ex) {
+                } catch (
+                    InvalidNumberException | NonExistentAccountException ex
+                ) {
                     System.out.println("Operation failed: " + ex.getMessage());
                 }
                 break;
-
             case 5:
                 System.out.print("Account number: ");
                 accountNumber = Integer.parseInt(scanner.nextLine());
@@ -155,11 +149,12 @@ public class Main {
                     } else {
                         System.out.println("Insufficient funds");
                     }
-                } catch (InvalidNumberException | NonExistentAccountException ex) {
+                } catch (
+                    InvalidNumberException | NonExistentAccountException ex
+                ) {
                     System.out.println("Operation failed: " + ex.getMessage());
                 }
                 break;
-
             case 6:
                 System.out.print("Account number: ");
                 accountNumber = Integer.parseInt(scanner.nextLine());
@@ -170,7 +165,6 @@ public class Main {
                     System.out.println("Operation failed: " + ex.getMessage());
                 }
                 break;
-
             case 7:
                 System.out.print("Account number: ");
                 accountNumber = Integer.parseInt(scanner.nextLine());
@@ -182,7 +176,6 @@ public class Main {
                     System.out.println("Operation failed: " + ex.getMessage());
                 }
                 break;
-
             case 8:
                 System.out.print("Account number: ");
                 accountNumber = Integer.parseInt(scanner.nextLine());
@@ -194,12 +187,17 @@ public class Main {
                 value = Double.parseDouble(scanner.nextLine());
 
                 try {
-                    accounts.transfer(accountNumber, destinationAccountNumber, value);
-                } catch (InvalidNumberException | NonExistentAccountException ex) {
+                    accounts.transfer(
+                        accountNumber,
+                        destinationAccountNumber,
+                        value
+                    );
+                } catch (
+                    InvalidNumberException | NonExistentAccountException ex
+                ) {
                     System.out.println("Operation failed: " + ex.getMessage());
                 }
                 break;
-
             case 9:
                 System.out.println("Screen or Printer? (S/P)");
                 String input = scanner.nextLine();
@@ -216,23 +214,22 @@ public class Main {
 
                 print.print(accounts.getAllAccountsInfo().toString());
                 break;
-
             case 10:
                 System.out.println(accounts.getCurrentAccountsSortedByNumber());
                 break;
-
             case 11:
-                System.out.println(accounts.getCurrentAccountsSortedByBalance());
+                System.out.println(
+                    accounts.getCurrentAccountsSortedByBalance()
+                );
                 break;
-
             case 12:
-                System.out.println(accounts.getSpecialAccountsWithNegativeBalance());
+                System.out.println(
+                    accounts.getSpecialAccountsWithNegativeBalance()
+                );
                 break;
-
             case 0:
                 System.out.println("Finishing...");
                 break;
-
             default:
                 System.out.println("Invalid option");
                 break;
@@ -267,7 +264,6 @@ public class Main {
                     handleClientMenuOption(clientMenuOption);
 
                     break;
-
                 case 2:
                     System.out.println("1. Add current account");
                     System.out.println("2. Add savings account");
@@ -278,27 +274,29 @@ public class Main {
                     System.out.println("7. Remove account");
                     System.out.println("8. Transfer");
                     System.out.println("9. Get all accounts info");
-                    System.out.println("10. Get current accounts ordered by number");
-                    System.out.println("11. Get current accounts ordered by balance");
-                    System.out.println("12. Get special accounts with negative balance");
+                    System.out.println(
+                        "10. Get current accounts ordered by number"
+                    );
+                    System.out.println(
+                        "11. Get current accounts ordered by balance"
+                    );
+                    System.out.println(
+                        "12. Get special accounts with negative balance"
+                    );
                     System.out.println("0. Back");
 
                     accountMenuOption = Integer.parseInt(scanner.nextLine());
                     handleAccountMenuOption(accountMenuOption);
 
                     break;
-
                 case 0:
                     break;
-
                 default:
                     System.out.println("Invalid option");
                     break;
-
             }
         } while (mainMenuOption != 0);
 
         scanner.close();
     }
-
 }

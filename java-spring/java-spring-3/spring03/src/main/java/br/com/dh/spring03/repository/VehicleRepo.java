@@ -3,13 +3,12 @@ package br.com.dh.spring03.repository;
 import br.com.dh.spring03.model.Vehicle;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import org.springframework.stereotype.Repository;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class VehicleRepo {
@@ -21,7 +20,10 @@ public class VehicleRepo {
         List<Vehicle> vehicles = null;
 
         try {
-            vehicles = Arrays.asList(mapper.readValue(new File(fileLink), Vehicle[].class));
+            vehicles =
+                Arrays.asList(
+                    mapper.readValue(new File(fileLink), Vehicle[].class)
+                );
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -54,5 +56,4 @@ public class VehicleRepo {
             ex.printStackTrace();
         }
     }
-
 }

@@ -13,5 +13,4 @@ public class ProductDTO {
         this.name = product.getName();
         this.value = product.getValue();
     }
-
 }

@@ -56,5 +56,4 @@ public abstract class Account implements Comparable<Account> {
         }
         return 0;
     }
-
 }

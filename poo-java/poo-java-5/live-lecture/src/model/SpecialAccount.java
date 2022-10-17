@@ -27,5 +27,4 @@ public class SpecialAccount extends Account {
     public String toString() {
         return "Special Account: " + super.toString();
     }
-
 }

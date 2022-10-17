@@ -20,5 +20,4 @@ public class Rectangle extends Shape {
     public void show(Print print) {
         print.print(getName());
     }
-
 }

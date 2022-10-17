@@ -12,5 +12,4 @@ public class AppWatch {
         System.out.println("Minute: " + myWatch.getMinute());
         System.out.println("Minute: " + myWatch2.getMinute());
     }
-
 }

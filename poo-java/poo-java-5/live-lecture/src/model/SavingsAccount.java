@@ -34,5 +34,4 @@ public class SavingsAccount extends Account {
     public String toString() {
         return "Savings Account: " + super.toString();
     }
-
 }

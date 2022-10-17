@@ -15,5 +15,4 @@ public class MainGenerics {
         // List of unknown type, not recommended
         List<?> list = new ArrayList<>();
     }
-
 }

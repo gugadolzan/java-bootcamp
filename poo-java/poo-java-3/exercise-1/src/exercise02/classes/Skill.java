@@ -14,5 +14,4 @@ public class Skill {
                 "description='" + description + '\'' +
                 '}';
     }
-
 }

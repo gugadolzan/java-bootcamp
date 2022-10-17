@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class JungleMarathon {
 
-    final private ArrayList<Circuit> circuits;
-    final private Double totalAmount;
-    final private int totalRegistrations;
+    private final ArrayList<Circuit> circuits;
+    private final Double totalAmount;
+    private final int totalRegistrations;
 
     public JungleMarathon(ArrayList<Circuit> circuits) {
         this.circuits = circuits;
@@ -22,8 +22,6 @@ public class JungleMarathon {
         return totalAmount;
     }
 
-    ;
-
     public int calculateTotalRegistrations() {
         int totalRegistrations = 0;
         for (Circuit circuit : circuits) {
@@ -39,5 +37,4 @@ public class JungleMarathon {
                 ", totalRegistrations=" + totalRegistrations +
                 '}';
     }
-
 }

@@ -20,5 +20,4 @@ public class Main {
         cow.makeSound();
         cow.eatPlants();
     }
-
 }

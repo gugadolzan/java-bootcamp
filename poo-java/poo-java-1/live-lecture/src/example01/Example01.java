@@ -24,5 +24,4 @@ public class Example01 {
 
         System.out.println("Total = " + sum);
     }
-
 }

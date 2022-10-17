@@ -37,5 +37,4 @@ public class Product {
     public double calculateTotalPrice(int quantity) {
         return price * quantity;
     }
-
 }

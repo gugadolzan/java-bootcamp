@@ -2,12 +2,11 @@ package br.com.dh.spring03.controller;
 
 import br.com.dh.spring03.model.Vehicle;
 import br.com.dh.spring03.service.IVehicle;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/vehicles")
@@ -29,7 +28,10 @@ public class VehicleController {
 
     @GetMapping("/by-value")
     public ResponseEntity<List<Vehicle>> getAllOrderedByValue() {
-        return new ResponseEntity<>(service.getAllOrderedByValue(), HttpStatus.OK);
+        return new ResponseEntity<>(
+            service.getAllOrderedByValue(),
+            HttpStatus.OK
+        );
     }
 
     @PostMapping
@@ -39,8 +41,9 @@ public class VehicleController {
     }
 
     @GetMapping("/model/{model}")
-    public ResponseEntity<List<Vehicle>> getByModel(@PathVariable String model) {
+    public ResponseEntity<List<Vehicle>> getByModel(
+        @PathVariable String model
+    ) {
         return new ResponseEntity<>(service.getByModel(model), HttpStatus.OK);
     }
-
 }

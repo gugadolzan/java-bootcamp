@@ -2,13 +2,12 @@ package br.com.dh.spring02.controller;
 
 import br.com.dh.spring02.dto.ProductDTO;
 import br.com.dh.spring02.model.Product;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/products")
@@ -24,9 +23,10 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public ResponseEntity<ProductDTO> getProduct(@PathVariable int id) {
-        Optional<Product> product = products.stream()
-                .filter(p -> p.getId() == id)
-                .findFirst();
+        Optional<Product> product = products
+            .stream()
+            .filter(p -> p.getId() == id)
+            .findFirst();
         if (product.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -43,9 +43,10 @@ public class ProductController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable int id) {
-        Optional<Product> product = products.stream()
-                .filter(p -> p.getId() == id)
-                .findFirst();
+        Optional<Product> product = products
+            .stream()
+            .filter(p -> p.getId() == id)
+            .findFirst();
         if (product.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -58,5 +59,4 @@ public class ProductController {
         // return new ResponseEntity<>(products, HttpStatus.OK);
         return ResponseEntity.ok(products);
     }
-
 }

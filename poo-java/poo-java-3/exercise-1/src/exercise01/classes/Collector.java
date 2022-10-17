@@ -24,5 +24,4 @@ public class Collector implements CashWithdrawal, BalanceInquiry {
     public void failedTransaction(String transactionType) {
         System.out.println("Failed " + transactionType);
     }
-
 }

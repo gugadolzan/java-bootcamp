@@ -63,5 +63,4 @@ public class Registration {
                 ", registrationFee=" + registrationFee +
                 '}';
     }
-
 }

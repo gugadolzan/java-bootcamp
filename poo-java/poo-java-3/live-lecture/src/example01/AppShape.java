@@ -28,5 +28,4 @@ public class AppShape {
         shapes[0].show(screen);
         shapes[1].show(printer);
     }
-
 }

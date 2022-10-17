@@ -1,11 +1,10 @@
+import java.util.Scanner;
 import model.Bill;
 import model.Customer;
 import model.Item;
 import repository.BillRepository;
 import repository.CustomerRepository;
 import repository.ItemRepository;
-
-import java.util.Scanner;
 
 public class Main {
 
@@ -56,5 +55,4 @@ public class Main {
         System.out.println("Bill:");
         System.out.println(bill);
     }
-
 }

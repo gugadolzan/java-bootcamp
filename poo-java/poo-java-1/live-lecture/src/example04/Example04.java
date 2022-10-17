@@ -15,5 +15,4 @@ public class Example04 {
             System.out.print(vector[i] + " ");
         }
     }
-
 }

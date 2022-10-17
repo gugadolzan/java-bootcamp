@@ -24,5 +24,4 @@ public class Executive implements Deposit, Transfer {
     public void transfer(double amount) {
         System.out.println("Transfer: " + amount);
     }
-
 }

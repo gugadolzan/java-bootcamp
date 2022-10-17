@@ -24,5 +24,4 @@ public class CurrentAccount extends Account {
     public String toString() {
         return "Current Account: " + super.toString();
     }
-
 }

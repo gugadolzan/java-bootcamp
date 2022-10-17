@@ -17,5 +17,4 @@ public class Cat extends Animal implements Carnivore {
     public void eatMeat() {
         System.out.println("Cat eats meat");
     }
-
 }

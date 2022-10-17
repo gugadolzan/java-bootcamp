@@ -51,7 +51,11 @@ public class Garage {
     }
 
     public double averagePrice() {
-        double averagePrice = vehicles.stream().mapToInt(Vehicle::getPrice).average().orElse(0);
+        double averagePrice = vehicles
+            .stream()
+            .mapToInt(Vehicle::getPrice)
+            .average()
+            .orElse(0);
         return Math.round(averagePrice * 100.0) / 100.0;
     }
 
@@ -62,5 +66,4 @@ public class Garage {
                 ", vehicles=" + vehicles +
                 '}';
     }
-
 }

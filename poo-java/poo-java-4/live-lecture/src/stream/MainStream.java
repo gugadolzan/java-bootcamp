@@ -8,7 +8,18 @@ import java.util.stream.Stream;
 public class MainStream {
 
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1, 22, 13, 4, 56, 36, 75, 58, 19, 10);
+        List<Integer> numbers = Arrays.asList(
+            1,
+            22,
+            13,
+            4,
+            56,
+            36,
+            75,
+            58,
+            19,
+            10
+        );
 
         Stream<Integer> stream = numbers.stream();
 
@@ -18,15 +29,13 @@ public class MainStream {
 
         System.out.println();
         System.out.println("Print even numbers");
-        List<Integer> evenNumbers = numbers.stream()
-                .filter(n -> n % 2 == 0)
-                .collect(Collectors.toList());
+        List<Integer> evenNumbers = numbers
+            .stream()
+            .filter(n -> n % 2 == 0)
+            .collect(Collectors.toList());
         System.out.println(evenNumbers);
 
         System.out.println("Sorted numbers");
-        numbers.stream()
-                .sorted()
-                .forEach(System.out::println);
+        numbers.stream().sorted().forEach(System.out::println);
     }
-
 }

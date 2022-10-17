@@ -16,5 +16,4 @@ public class Example03 {
             System.out.print(count + " ");
         }
     }
-
 }

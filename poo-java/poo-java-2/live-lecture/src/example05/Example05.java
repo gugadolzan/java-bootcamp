@@ -16,7 +16,9 @@ public class Example05 {
                 System.out.println(vector[i] / ZERO);
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
+            System.out.println(
+                "ArrayIndexOutOfBoundsException: " + e.getMessage()
+            );
         } catch (ArithmeticException e) {
             System.out.println("ArithmeticException: " + e.getMessage());
         } catch (Exception e) {
@@ -27,5 +29,4 @@ public class Example05 {
 
         System.out.println("End");
     }
-
 }

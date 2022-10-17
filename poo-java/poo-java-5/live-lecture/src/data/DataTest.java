@@ -34,5 +34,4 @@ public class DataTest {
         accounts.addCurrentAccount(clients.getClient("12345678908"));
         return accounts;
     }
-
 }

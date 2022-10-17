@@ -4,8 +4,7 @@ public class Watch {
 
     private int hour, minute, second;
 
-    public Watch() {
-    }
+    public Watch() {}
 
     public Watch(int hour, int minute, int second) {
         setHour(hour);
@@ -30,7 +29,8 @@ public class Watch {
     }
 
     public void showTime() {
-        System.out.println("Current time: " + hour + ":" + minute + ":" + second);
+        System.out.println(
+            "Current time: " + hour + ":" + minute + ":" + second
+        );
     }
-
 }

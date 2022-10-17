@@ -21,7 +21,8 @@ public class ExceptionsExercise {
         }
     }
 
-    public static void calculate2(int a, int b) throws IllegalArgumentException {
+    public static void calculate2(int a, int b)
+        throws IllegalArgumentException {
         try {
             int c = b / a;
             System.out.println(c);
@@ -31,5 +32,4 @@ public class ExceptionsExercise {
             System.out.println("Program finished");
         }
     }
-
 }
