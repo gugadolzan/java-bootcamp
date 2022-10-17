@@ -2,9 +2,11 @@ package br.com.dh.spring03.repository;
 
 import br.com.dh.spring03.model.Vehicle;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -37,6 +39,20 @@ public class VehicleRepo {
         }
 
         return Optional.empty();
+    }
+
+    public void saveVehicle(Vehicle vehicle) {
+        ObjectWriter writer = mapper.writerWithDefaultPrettyPrinter();
+
+        List<Vehicle> vehicles = getAll();
+        vehicles = new ArrayList<>(vehicles);
+        vehicles.add(vehicle);
+
+        try {
+            writer.writeValue(new File(fileLink), vehicles);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
 }

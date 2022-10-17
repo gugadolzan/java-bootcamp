@@ -38,4 +38,9 @@ public class VehicleService implements IVehicle {
 
         return vehicles.stream().sorted().collect(Collectors.toList());
     }
+
+    @Override
+    public void saveVehicle(Vehicle vehicle) {
+        repo.saveVehicle(vehicle);
+    }
 }

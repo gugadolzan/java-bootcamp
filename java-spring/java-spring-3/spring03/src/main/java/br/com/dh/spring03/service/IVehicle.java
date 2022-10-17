@@ -13,4 +13,6 @@ public interface IVehicle {
 
     List<Vehicle> getAllOrderedByValue();
 
+    void saveVehicle(Vehicle vehicle);
+
 }
