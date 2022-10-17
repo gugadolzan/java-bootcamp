@@ -1,0 +1,32 @@
+[
+  {
+    "plate": "ABC 1234",
+    "model": "Fusca",
+    "year": 1970,
+    "value": 23000.0
+  },
+  {
+    "plate": "DEF 4321",
+    "model": "Opala",
+    "year": 1990,
+    "value": 43000.0
+  },
+  {
+    "plate": "XYZ 8888",
+    "model": "Civic",
+    "year": 1998,
+    "value": 10000.0
+  },
+  {
+    "plate": "AAA 8888",
+    "model": "Civic",
+    "year": 1997,
+    "value": 12000.0
+  },
+  {
+    "plate": "FFF 1212",
+    "model": "Gol",
+    "year": 2001,
+    "value": 14500.0
+  }
+]
