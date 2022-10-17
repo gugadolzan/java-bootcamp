@@ -11,4 +11,6 @@ public interface IVehicle {
 
     Vehicle getVehicle(String plate) throws NotFoundException;
 
+    List<Vehicle> getAllOrderedByValue();
+
 }

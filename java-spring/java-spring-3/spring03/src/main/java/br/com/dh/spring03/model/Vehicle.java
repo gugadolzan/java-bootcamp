@@ -9,12 +9,21 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class
-Vehicle {
+public class Vehicle implements Comparable<Vehicle> {
 
     private String plate;
     private String model;
     private int year;
     private double value;
 
+    @Override
+    public int compareTo(Vehicle o) {
+        if (this.value > o.getValue()) {
+            return 1;
+        }
+        if (this.value < o.getValue()) {
+            return -1;
+        }
+        return 0;
+    }
 }

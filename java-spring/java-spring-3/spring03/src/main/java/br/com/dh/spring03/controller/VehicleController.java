@@ -30,4 +30,9 @@ public class VehicleController {
         return new ResponseEntity<>(vehicle, HttpStatus.OK);
     }
 
+    @GetMapping("/by-value")
+    public ResponseEntity<List<Vehicle>> getAllOrderedByValue() {
+        return new ResponseEntity<>(service.getAllOrderedByValue(), HttpStatus.OK);
+    }
+
 }
