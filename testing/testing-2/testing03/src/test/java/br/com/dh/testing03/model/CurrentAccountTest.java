@@ -1,6 +1,7 @@
 package br.com.dh.testing03.model;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import br.com.dh.testing03.exception.InvalidNumberException;
 import org.junit.jupiter.api.BeforeEach;
@@ -41,5 +42,23 @@ class CurrentAccountTest {
 
         assertThat(currentAccount.getBalance())
             .isEqualTo(depositValue - withdrawValue);
+    }
+
+    @Test
+    void withdraw_returnsFalse_whenBalanceIsNotEnough()
+        throws InvalidNumberException {
+        double withdrawValue = 100;
+
+        currentAccount.withdraw(withdrawValue);
+
+        assertThat(currentAccount.getBalance()).isZero();
+    }
+
+    @Test
+    void withdraw_throwsException_whenValueIsInvalid() {
+        double withdrawValue = -100;
+
+        assertThatThrownBy(() -> currentAccount.withdraw(withdrawValue))
+            .isInstanceOf(InvalidNumberException.class);
     }
 }
