@@ -9,6 +9,7 @@ import br.com.dh.testing03.dao.AccountDAO;
 import br.com.dh.testing03.exception.InvalidNumberException;
 import br.com.dh.testing03.exception.NonExistentAccountException;
 import br.com.dh.testing03.model.CurrentAccount;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,46 +25,41 @@ class CurrentAccountServiceTest {
     @Mock
     private AccountDAO dao;
 
+    private CurrentAccount currentAccount;
+
+    @BeforeEach
+    void setup() {
+        currentAccount = new CurrentAccount(1, "Client 1");
+    }
+
     @Test
     @DisplayName("Should create a new current account")
     void newCurrentAccount_returnsCurrentAccount() {
-        String clientName = "Client 1";
-        int accountNumber = 1;
-        CurrentAccount newAccount = new CurrentAccount(
-            accountNumber,
-            clientName
-        );
-
         Mockito
             .when(dao.newCurrentAccount(ArgumentMatchers.anyString()))
-            .thenReturn(newAccount);
+            .thenReturn(currentAccount);
 
-        CurrentAccount currentAccount = service.newCurrentAccount(clientName);
+        CurrentAccount result = service.newCurrentAccount(
+            currentAccount.getClient()
+        );
 
-        assertThat(currentAccount).isNotNull();
-        assertThat(currentAccount.getNumber()).isPositive();
-        assertThat(currentAccount.getClient()).isEqualTo(clientName);
+        assertThat(result).isNotNull();
+        assertThat(result.getNumber()).isPositive();
+        assertThat(result.getClient()).isEqualTo(currentAccount.getClient());
     }
 
     @Test
     void getAccount_returnsCurrentAccount_whenAccountExists()
         throws NonExistentAccountException {
-        String clientName = "Client 1";
-        int accountNumber = 1;
-        CurrentAccount newAccount = new CurrentAccount(
-            accountNumber,
-            clientName
-        );
-
         Mockito
             .when(dao.getCurrentAccount(ArgumentMatchers.anyInt()))
-            .thenReturn(newAccount);
+            .thenReturn(currentAccount);
 
-        CurrentAccount currentAccount = service.getAccount(accountNumber);
+        CurrentAccount result = service.getAccount(currentAccount.getNumber());
 
-        assertThat(currentAccount).isNotNull();
-        assertThat(currentAccount.getNumber()).isEqualTo(accountNumber);
-        assertThat(currentAccount.getBalance()).isZero();
+        assertThat(result).isNotNull();
+        assertThat(result.getNumber()).isEqualTo(currentAccount.getNumber());
+        assertThat(result.getBalance()).isZero();
     }
 
     @Test
@@ -86,27 +82,22 @@ class CurrentAccountServiceTest {
     @Test
     void withdraw_returnsTrue_whenAccountExistsAndValueIsValidAndHasEnoughBalance()
         throws NonExistentAccountException, InvalidNumberException {
-        String clientName = "Client 1";
-        int accountNumber = 1;
         double value = 100;
-        CurrentAccount newAccount = new CurrentAccount(
-            accountNumber,
-            clientName
-        );
-        newAccount.deposit(value);
+
+        currentAccount.deposit(value);
 
         Mockito
             .when(dao.getCurrentAccount(ArgumentMatchers.anyInt()))
-            .thenReturn(newAccount);
+            .thenReturn(currentAccount);
 
         Mockito
             .when(dao.updateAccount(ArgumentMatchers.any(CurrentAccount.class)))
             .thenReturn(true);
 
-        boolean result = service.withdraw(accountNumber, value);
+        boolean result = service.withdraw(currentAccount.getNumber(), value);
 
         assertThat(result).isTrue();
-        assertThat(newAccount.getBalance()).isZero();
+        assertThat(currentAccount.getBalance()).isZero();
     }
 
     @Test
@@ -132,22 +123,15 @@ class CurrentAccountServiceTest {
     @Test
     void withdraw_throwsInvalidNumberException_whenValueIsInvalid()
         throws NonExistentAccountException {
-        String clientName = "Client 1";
-        int accountNumber = 1;
         double value = -100;
-
-        CurrentAccount newAccount = new CurrentAccount(
-            accountNumber,
-            clientName
-        );
 
         Mockito
             .when(dao.getCurrentAccount(ArgumentMatchers.anyInt()))
-            .thenReturn(newAccount);
+            .thenReturn(currentAccount);
 
         assertThrows(
             InvalidNumberException.class,
-            () -> service.withdraw(accountNumber, value)
+            () -> service.withdraw(currentAccount.getNumber(), value)
         );
         verify(dao, never())
             .updateAccount(ArgumentMatchers.any(CurrentAccount.class));
